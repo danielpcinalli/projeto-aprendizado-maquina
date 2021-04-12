@@ -2,7 +2,7 @@ import pandas as pd
 from sklearn.tree import DecisionTreeClassifier
 import numpy as np
 np.random.seed(0)# seed para determinismo
-folder = 'ml-latest-small'
+folder = 'ml-full'
 
 #leitura de arquivos
 ratings = pd.read_csv(f"{folder}/ratings.csv")
@@ -13,26 +13,20 @@ ratings = ratings.drop(['rating'], axis = 1)
 
 #para cada usuário, o último filme visto será o conjunto de testes, e os outros o conjunto de treinamento
 
-ratings['last_movie'] = False #cria uma coluna para gravar qual o último filme para cada usuário
-users = pd.unique(ratings['userId'])
-for user in users:
-    user_entries = ratings.loc[ratings['userId'] == user]
-    last_timestamp = max(user_entries['timestamp'])
-    ratings.loc[(
-        (ratings['userId'] == user) & 
-        (ratings['timestamp'] == last_timestamp)), 
-        'last_movie'] = True
+#retorna as linhas referentes ao último filme que recebeu nota de cada usuário
+last_ratings = ratings.groupby('userId', as_index=False).nth(-1)
 
+#cria uma maścara para test e train
+test_mask = ratings.index.isin(last_ratings.index)
+train_mask = ~test_mask
 
-#cria conjuntos de treinamento e teste
-train = ratings.loc[ratings['last_movie'] == False]
-test = ratings.loc[ratings['last_movie'] == True]
-train = train.drop(['last_movie'], axis=1)
-test = test.drop(['last_movie'], axis=1)
+#usa maścaras
+test = ratings[test_mask]
+train = ratings[train_mask]
 
+#separa entre X (atributos) e y (classes)
 X_train = train.loc[:, train.columns != 'liked']
 y_train = train.loc[:, ['liked']]
-
 X_test = test.loc[:, test.columns != 'liked']
 y_test = test.loc[:, ['liked']]
 
