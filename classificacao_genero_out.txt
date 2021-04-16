@@ -1,0 +1,415 @@
+
+Call:
+C5.0.default(x = train.X, y = train.y)
+
+
+C5.0 [Release 2.07 GPL Edition]  	Fri Apr 16 14:31:53 2021
+-------------------------------
+
+Class specified by attribute `outcome'
+
+Read 100226 cases (22 attributes) from undefined.data
+
+Decision tree:
+
+Film.Noir = True: True (862/68)
+Film.Noir = False:
+:...Documentary = True:
+    :...Horror = False: True (1205/96)
+    :   Horror = True: False (3)
+    Documentary = False:
+    :...War = True: True (4784/521)
+        War = False:
+        :...userId in {1,2,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,20,21,23,24,
+            :          25,26,27,28,29,30,31,32,33,34,35,37,38,39,40,41,42,43,
+            :          44,45,46,47,48,49,51,52,53,54,56,57,58,59,60,61,62,63,
+            :          64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,82,
+            :          83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,
+            :          101,102,103,104,105,106,107,108,109,110,111,112,113,114,
+            :          115,116,117,118,119,120,121,122,123,124,125,126,128,129,
+            :          130,131,132,133,134,135,136,137,138,140,141,142,143,144,
+            :          145,148,150,151,152,154,155,156,157,159,161,162,163,164,
+            :          165,166,167,168,169,170,171,172,173,174,175,176,177,178,
+            :          179,180,181,182,183,184,185,186,187,188,189,190,191,192,
+            :          193,194,195,196,197,198,199,200,201,202,203,204,205,206,
+            :          208,209,210,211,212,213,215,216,217,218,219,220,221,222,
+            :          223,224,225,226,227,228,229,231,232,233,234,235,236,237,
+            :          238,239,240,241,242,243,244,245,246,247,248,249,250,251,
+            :          252,253,254,256,257,258,260,261,262,263,264,265,266,267,
+            :          268,269,270,272,273,274,275,276,277,278,279,280,281,282,
+            :          283,284,285,286,288,289,290,291,292,295,296,299,300,301,
+            :          302,303,304,305,306,309,310,312,313,314,315,316,317,318,
+            :          319,320,321,322,323,324,325,326,327,328,330,331,332,334,
+            :          335,336,337,339,340,341,342,343,344,345,346,347,348,349,
+            :          350,351,352,353,354,355,356,357,358,359,360,361,362,363,
+            :          364,366,367,368,369,370,371,372,373,374,375,376,377,378,
+            :          379,380,381,382,383,384,385,386,387,388,389,390,391,393,
+            :          395,397,398,399,400,401,402,403,404,405,406,407,408,409,
+            :          410,411,412,413,414,415,417,418,419,420,421,422,423,424,
+            :          425,426,427,429,430,432,433,434,435,436,437,438,439,440,
+            :          441,443,444,445,446,447,449,450,451,452,453,454,455,456,
+            :          457,458,459,460,461,462,463,464,465,466,467,468,469,470,
+            :          471,472,473,474,475,476,477,479,480,482,483,484,485,486,
+            :          487,488,489,490,491,492,493,494,495,496,497,498,499,500,
+            :          501,503,504,505,506,507,509,510,511,512,513,514,515,516,
+            :          518,519,520,521,522,523,524,525,526,527,528,529,530,531,
+            :          532,533,534,536,537,538,539,540,541,542,543,544,545,546,
+            :          547,548,549,550,551,552,553,554,555,556,557,558,559,560,
+            :          561,562,563,564,565,566,568,569,570,572,573,574,575,577,
+            :          578,579,580,581,582,583,584,585,586,587,588,589,590,591,
+            :          592,593,594,595,596,597,598,600,601,602,603,604,605,606,
+            :          607,608,609,610}: True (82476/12649)
+            userId in {36,139,153,287,298,442,508,517,567,571,599}:
+            :...userId in {139,442,508}: False (223/43)
+            :   userId in {36,153,287,298,517,567,571,599}:
+            :   :...Drama = False:
+            :       :...Mystery = True:
+            :       :   :...Horror = True: False (35/11)
+            :       :   :   Horror = False:
+            :       :   :   :...Thriller = False: False (35/15)
+            :       :   :       Thriller = True: True (75/23)
+            :       :   Mystery = False:
+            :       :   :...Musical = True:
+            :       :       :...userId in {36,153,567}: False (13/1)
+            :       :       :   userId in {298,517,571}: True (51/16)
+            :       :       :   userId = 287:
+            :       :       :   :...Romance = False: True (4/1)
+            :       :       :   :   Romance = True: False (2)
+            :       :       :   userId = 599:
+            :       :       :   :...Fantasy = False:
+            :       :       :       :...Comedy = False: False (10/1)
+            :       :       :       :   Comedy = True: True (24/11)
+            :       :       :       Fantasy = True:
+            :       :       :       :...Comedy = False: True (11/1)
+            :       :       :           Comedy = True: False (5/1)
+            :       :       Musical = False:
+            :       :       :...Sci.Fi = False:
+            :       :           :...Comedy = True: False (1181/329)
+            :       :           :   Comedy = False:
+            :       :           :   :...userId = 36: True (5/1)
+            :       :           :       userId in {153,567,
+            :       :           :       :          599}: False (413/148)
+            :       :           :       userId = 287:
+            :       :           :       :...Fantasy = False: False (8)
+            :       :           :       :   Fantasy = True: True (8/3)
+            :       :           :       userId = 298:
+            :       :           :       :...Horror = False: True (76/34)
+            :       :           :       :   Horror = True: False (12/2)
+            :       :           :       userId = 517:
+            :       :           :       :...Fantasy = False: False (35/6)
+            :       :           :       :   Fantasy = True: True (16/1)
+            :       :           :       userId = 571:
+            :       :           :       :...Action = False: False (57/22)
+            :       :           :           Action = True: True (3)
+            :       :           Sci.Fi = True:
+            :       :           :...userId in {36,153,287,517,
+            :       :               :          567}: False (145/37)
+            :       :               userId in {298,571,599}:
+            :       :               :...Children = True: False (20/6)
+            :       :                   Children = False:
+            :       :                   :...Adventure = True: True (187/69)
+            :       :                       Adventure = False:
+            :       :                       :...Animation = False: False (240/101)
+            :       :                           Animation = True: True (28/10)
+            :       Drama = True:
+            :       :...Crime = True:
+            :           :...Musical = True: False (3)
+            :           :   Musical = False:
+            :           :   :...userId = 571: True (0)
+            :           :       userId = 36: False (7)
+            :           :       userId in {153,517}:
+            :           :       :...Mystery = False: False (25/7)
+            :           :       :   Mystery = True: True (2)
+            :           :       userId in {287,298,567,599}:
+            :           :       :...Romance = False: True (243/87)
+            :           :           Romance = True: False (18/7)
+            :           Crime = False:
+            :           :...Western = True: True (19/5)
+            :               Western = False:
+            :               :...Thriller = True:
+            :                   :...Sci.Fi = False:
+            :                   :   :...Fantasy = False: False (166/50)
+            :                   :   :   Fantasy = True: True (9/3)
+            :                   :   Sci.Fi = True:
+            :                   :   :...Mystery = True: True (17/3)
+            :                   :       Mystery = False:
+            :                   :       :...Horror = False: False (39/16)
+            :                   :           Horror = True: True (2)
+            :                   Thriller = False:
+            :                   :...userId in {36,517}: False (130/62)
+            :                       userId in {153,571}: True (88/30)
+            :                       userId = 287:
+            :                       :...Children = False: True (40/13)
+            :                       :   Children = True: False (3)
+            :                       userId = 298:
+            :                       :...Animation = False: False (203/79)
+            :                       :   Animation = True: True (10/2)
+            :                       userId = 567:
+            :                       :...IMAX = False: True (89/42)
+            :                       :   IMAX = True: False (10/1)
+            :                       userId = 599:
+            :                       :...Comedy = True: False (195/89)
+            :                           Comedy = False:
+            :                           :...Musical = False: True (391/173)
+            :                               Musical = True:
+            :                               :...Children = False: False (11/1)
+            :                                   Children = True: True (2)
+            userId in {3,19,22,50,55,81,127,146,147,149,158,160,207,214,230,
+            :          255,259,271,293,294,297,307,308,311,329,333,338,365,392,
+            :          394,396,416,428,431,448,478,481,502,535,576}:
+            :...Western = True:
+                :...Horror = True: False (2)
+                :   Horror = False:
+                :   :...IMAX = False: True (104/28)
+                :       IMAX = True: False (2)
+                Western = False:
+                :...Horror = True:
+                    :...Animation = True: True (3)
+                    :   Animation = False:
+                    :   :...Musical = True: True (13/1)
+                    :       Musical = False:
+                    :       :...Fantasy = False: False (493/190)
+                    :           Fantasy = True: True (55/21)
+                    Horror = False:
+                    :...Animation = True:
+                        :...userId in {3,55,81,149,293,333,338,365,394,
+                        :   :          416}: False (35/6)
+                        :   userId in {19,127,146,147,158,207,214,255,259,271,
+                        :   :          294,297,307,308,311,329,392,396,431,448,
+                        :   :          478,481,502,535,576}: True (240/58)
+                        :   userId = 22:
+                        :   :...Comedy = False: False (5)
+                        :   :   Comedy = True: True (7/1)
+                        :   userId = 50:
+                        :   :...IMAX = False: True (46/20)
+                        :   :   IMAX = True: False (7)
+                        :   userId = 160:
+                        :   :...Sci.Fi = False: True (23/3)
+                        :   :   Sci.Fi = True: False (2)
+                        :   userId = 230:
+                        :   :...Romance = False: True (12/4)
+                        :   :   Romance = True: False (5)
+                        :   userId = 428:
+                        :   :...Children = False: True (8/1)
+                        :       Children = True: False (16/4)
+                        Animation = False:
+                        :...Children = True:
+                            :...Thriller = True: True (4)
+                            :   Thriller = False:
+                            :   :...Musical = False: False (294/108)
+                            :       Musical = True: True (44/10)
+                            Children = False:
+                            :...Crime = True: True (925/358)
+                                Crime = False:
+                                :...Mystery = True: True (174/67)
+                                    Mystery = False:
+                                    :...userId in {127,207,214,392,394,
+                                        :          535}: True (92/31)
+                                        userId in {147,338,428,431,
+                                        :          478}: False (213/99)
+                                        userId = 3:
+                                        :...Drama = False: True (11/1)
+                                        :   Drama = True: False (8)
+                                        userId = 22:
+                                        :...Fantasy = False: True (41/16)
+                                        :   Fantasy = True: False (11/2)
+                                        userId = 50:
+                                        :...Action = False: True (104/40)
+                                        :   Action = True: False (44/14)
+                                        userId = 55:
+                                        :...Romance = False: True (5/1)
+                                        :   Romance = True: False (5)
+                                        userId = 81:
+                                        :...Comedy = False: True (9/2)
+                                        :   Comedy = True: False (3)
+                                        userId = 146:
+                                        :...Thriller = False: True (10/2)
+                                        :   Thriller = True: False (3)
+                                        userId = 158:
+                                        :...Fantasy = False: True (10/1)
+                                        :   Fantasy = True: False (4/1)
+                                        userId = 255:
+                                        :...Romance = False: True (16/6)
+                                        :   Romance = True: False (6)
+                                        userId = 259:
+                                        :...Comedy = False: False (12/5)
+                                        :   Comedy = True: True (7)
+                                        userId = 271:
+                                        :...Action = False: True (20/3)
+                                        :   Action = True: False (5)
+                                        userId = 293:
+                                        :...Drama = False: False (6/1)
+                                        :   Drama = True: True (4)
+                                        userId = 297:
+                                        :...Thriller = False: True (3)
+                                        :   Thriller = True: False (32/11)
+                                        userId = 311:
+                                        :...Comedy = False: True (9/1)
+                                        :   Comedy = True: False (8/2)
+                                        userId = 329:
+                                        :...Drama = False: False (2)
+                                        :   Drama = True: True (5)
+                                        userId = 396:
+                                        :...Action = False: True (7/2)
+                                        :   Action = True: False (3)
+                                        userId = 416:
+                                        :...Drama = False: False (14/5)
+                                        :   Drama = True: True (14/3)
+                                        userId = 481:
+                                        :...Sci.Fi = False: False (14/6)
+                                        :   Sci.Fi = True: True (4)
+                                        userId = 502:
+                                        :...Romance = False: True (13/3)
+                                        :   Romance = True: False (3)
+                                        userId = 576:
+                                        :...Fantasy = False: False (9/2)
+                                        :   Fantasy = True: True (2)
+                                        userId = 149:
+                                        :...Action = True: True (27/10)
+                                        :   Action = False:
+                                        :   :...Adventure = False: True (4/1)
+                                        :       Adventure = True: False (6)
+                                        userId = 160:
+                                        :...Action = True: False (114/39)
+                                        :   Action = False:
+                                        :   :...Drama = False: False (47/19)
+                                        :       Drama = True: True (65/25)
+                                        userId = 230:
+                                        :...Adventure = True: True (28/4)
+                                        :   Adventure = False:
+                                        :   :...Drama = False: True (28/10)
+                                        :       Drama = True: False (19/7)
+                                        userId = 333:
+                                        :...Drama = True: True (8/2)
+                                        :   Drama = False:
+                                        :   :...Romance = False: False (5)
+                                        :       Romance = True: True (2)
+                                        userId = 365:
+                                        :...Musical = True: False (4)
+                                        :   Musical = False:
+                                        :   :...Drama = False: True (117/38)
+                                        :       Drama = True: False (50/20)
+                                        userId = 294:
+                                        :...Romance = False: True (213/97)
+                                        :   Romance = True:
+                                        :   :...Thriller = True: False (5)
+                                        :       Thriller = False:
+                                        :       :...Fantasy = False: False (45/17)
+                                        :           Fantasy = True: True (4)
+                                        userId = 308:
+                                        :...Fantasy = True: True (11)
+                                        :   Fantasy = False:
+                                        :   :...IMAX = True: True (4)
+                                        :       IMAX = False:
+                                        :       :...Action = False: True (26/12)
+                                        :           Action = True: False (11/2)
+                                        userId = 19:
+                                        :...Adventure = True: True (93/35)
+                                        :   Adventure = False:
+                                        :   :...Romance = False:
+                                        :       :...Action = False: False (159/54)
+                                        :       :   Action = True: True (26/12)
+                                        :       Romance = True:
+                                        :       :...Drama = False: True (62/22)
+                                        :           Drama = True: [S1]
+                                        userId = 448:
+                                        :...Action = False: True (792/323)
+                                        :   Action = True:
+                                        :   :...Adventure = False: False (178/74)
+                                        :       Adventure = True:
+                                        :       :...Drama = True: False (27/8)
+                                        :           Drama = False: [S2]
+                                        userId = 307:
+                                        :...IMAX = True: True (7/1)
+                                            IMAX = False:
+                                            :...Adventure = True: True (83/28)
+                                                Adventure = False:
+                                                :...Drama = False: False (273/98)
+                                                    Drama = True: [S3]
+
+SubTree [S1]
+
+Fantasy = False: False (30/11)
+Fantasy = True: True (6/1)
+
+SubTree [S2]
+
+Fantasy = False: True (137/54)
+Fantasy = True: False (32/11)
+
+SubTree [S3]
+
+Romance = False: False (131/64)
+Romance = True:
+:...Thriller = False: True (61/22)
+    Thriller = True: False (2)
+
+
+Evaluation on training data (100226 cases):
+
+	    Decision Tree   
+	  ----------------  
+	  Size      Errors  
+
+	   161 17158(17.1%)   <<
+
+
+	   (a)   (b)    <-classified as
+	  ----  ----
+	  3736 15243    (a): class False
+	  1915 79332    (b): class True
+
+
+	Attribute usage:
+
+	100.00%	Film.Noir
+	 99.14%	Documentary
+	 97.93%	War
+	 93.16%	userId
+	  7.72%	Horror
+	  7.66%	Western
+	  6.68%	Mystery
+	  6.61%	Animation
+	  6.54%	Crime
+	  5.72%	Children
+	  5.57%	Drama
+	  4.32%	Musical
+	  2.70%	Sci.Fi
+	  2.52%	Comedy
+	  2.02%	Thriller
+	  1.89%	Action
+	  1.84%	Adventure
+	  1.22%	Fantasy
+	  1.08%	Romance
+	  0.85%	IMAX
+
+
+Time: 0.6 secs
+
+Confusion Matrix and Statistics
+
+          Reference
+Prediction False True
+     False    11    8
+     True     83  508
+                                        
+               Accuracy : 0.8508        
+                 95% CI : (0.82, 0.8782)
+    No Information Rate : 0.8459        
+    P-Value [Acc > NIR] : 0.3942        
+                                        
+                  Kappa : 0.1507        
+                                        
+ Mcnemar's Test P-Value : 8.675e-15     
+                                        
+            Sensitivity : 0.9845        
+            Specificity : 0.1170        
+         Pos Pred Value : 0.8596        
+         Neg Pred Value : 0.5789        
+             Prevalence : 0.8459        
+         Detection Rate : 0.8328        
+   Detection Prevalence : 0.9689        
+      Balanced Accuracy : 0.5508        
+                                        
+       'Positive' Class : True          
+                                        
