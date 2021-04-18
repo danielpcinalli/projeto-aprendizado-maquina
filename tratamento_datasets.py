@@ -1,8 +1,8 @@
 import pandas as pd
 import numpy as np
 
-folder_original = 'ml-full'
-folder_tratado = 'ml-full-tratado'
+folder_original = 'ml-latest-small'
+folder_tratado = 'ml-small-tratado'
 
 def ratings_ordenado():
     """
@@ -88,14 +88,12 @@ def tratamento_genoma():
 
     #cria a coluna 'liked' = 'rating' > 3.0
     ratings['liked'] = ratings['rating'] >= 3.0
-    #retira colunas que não serão usadas
-    ratings = ratings.drop(['rating'], axis=1)
 
     #transforma o dataframe, colocando os genomas em colunas
     genome = genome.pivot(index='movieId', columns='tagId', values='relevance')
 
     #limitando aos 2 primeiros genomas, arquivo muito grande
-    genome = genome.iloc[:, 0:2] 
+    # genome = genome.iloc[:, 0:2] 
 
     #join entre os dataframes
     ratings_genome = ratings.merge(genome, on='movieId')
@@ -109,6 +107,6 @@ def tratamento_genoma():
     test.drop(['isLastMovie'], axis=1).to_csv(f'{folder_tratado}/classificacao_genoma_test.csv', index=False)
 
 if __name__ == '__main__':
-    tratamento_filme_classificacao_e_regressao()
-    tratamento_genero()
+    # tratamento_filme_classificacao_e_regressao()
+    # tratamento_genero()
     tratamento_genoma()

@@ -3,6 +3,8 @@ library(caret)
 
 test <- read.csv('./ml-small-tratado/classificacao_genoma_test.csv')
 train <- read.csv('./ml-small-tratado/classificacao_genoma_train.csv')
+train <- train[, c(-3)]
+test <- test[, c(-3)]
 
 train$userId <- as.factor(train$userId)
 test$userId <- as.factor(test$userId)

@@ -1,0 +1,158 @@
+Call:
+rpart::rpart(formula = rating ~ ., data = train, method = "anova")
+  n= 98846 
+
+          CP nsplit rel error    xerror        xstd
+1 0.11871700      0 1.0000000 1.0000371 0.004643130
+2 0.05144779      1 0.8812830 0.8876222 0.004362519
+3 0.03856876      2 0.8298352 0.8366931 0.004250404
+4 0.01959749      3 0.7912665 0.7979544 0.004105956
+5 0.01791115      4 0.7716690 0.7778806 0.004061773
+6 0.01715117      5 0.7537578 0.7658368 0.004016654
+7 0.01314472      6 0.7366066 0.7493859 0.003959803
+8 0.01000000      7 0.7234619 0.7385333 0.003925047
+
+Variable importance
+userId    X79   X391   X164   X140   X350   X433   X296    X86   X443    X54 
+    32     12      9      9      9      6      6      4      4      4      1 
+   X93   X162   X121   X446 
+     1      1      1      1 
+
+Node number 1: 98846 observations,    complexity param=0.118717
+  mean=3.503303, MSE=1.079798 
+  left son=2 (45031 obs) right son=3 (53815 obs)
+  Primary splits:
+      userId splits as  RRLRRRLRLLRRRLLRRRLRLLRRRLRLRRRRRLRLRLRRLRRLRRLRRLRRRLLRLRRRRRRRRRRLRRRRRRLLRLRRLLLRRRRRLRLRRLRRRRRRRLRRRRRRLRLRRLRLLRRLLRRRRLLRRRLLLRRLRRLRRRLRLLLRLRRRLRRRRLLLRRLRRRLRRLRRLRRRLRRRLRRRRRRRRRRRRLRRRRLRRRRRRRLLRRRRRLRRLLLRRLLRRRRRRLRLLRRRLRRRRRRRLRRRRRRRRRLRLRLRRLRRLRRLRLLRRLRRRRRRLRLRRRLLRRRLLLRRLLRRLRRRRLLLRRLRLLLLRRRRRLLLRRRLLRRRLLRRRLRRRLRRRRRRRLRRRRRRRRLLLRLRLRRLLRRLLRRRRRLRRRRLLLLRRRRLRLLLRRRRRRRLRLRRRRLRRLRLRRRRRLRRRRLLRRLRRRRLRLRRRLRRRLRLLRRRRRLRLRRRLLRRRRRLRRRRLLRRRLLLLLRRRRLRLLRRRRRLRRRLLLLRRLLLLLRRRLRRLRRRRRRLRRRRLRRRRRLLRRRRLRRRLLRRRRRLRRLRRRLRLRLRRRLRRLLRRRLLRRRRRRLRRRRLRLLRLRRRRRLLRLRRLRRLLR, improve=0.1187170, (0 missing)
+      X79    < 0.103875 to the left,  improve=0.1135185, (0 missing)
+      X164   < 0.144375 to the left,  improve=0.1106208, (0 missing)
+      X391   < 0.095625 to the left,  improve=0.1097963, (0 missing)
+      X54    < 0.075125 to the left,  improve=0.1078085, (0 missing)
+  Surrogate splits:
+      X54  < 0.061125 to the left,  agree=0.576, adj=0.070, (0 split)
+      X162 < 0.101875 to the left,  agree=0.574, adj=0.065, (0 split)
+      X93  < 0.068375 to the left,  agree=0.573, adj=0.064, (0 split)
+      X121 < 0.147125 to the left,  agree=0.573, adj=0.062, (0 split)
+      X446 < 0.172625 to the left,  agree=0.572, adj=0.060, (0 split)
+
+Node number 2: 45031 observations,    complexity param=0.05144779
+  mean=3.111901, MSE=1.08138 
+  left son=4 (20024 obs) right son=5 (25007 obs)
+  Primary splits:
+      X164 < 0.143375 to the left,  improve=0.1127660, (0 missing)
+      X79  < 0.103125 to the left,  improve=0.1116886, (0 missing)
+      X391 < 0.095625 to the left,  improve=0.1094281, (0 missing)
+      X338 < 0.177875 to the left,  improve=0.1088925, (0 missing)
+      X54  < 0.061125 to the left,  improve=0.1072630, (0 missing)
+  Surrogate splits:
+      X350 < 0.070375 to the left,  agree=0.868, adj=0.703, (0 split)
+      X433 < 0.047625 to the left,  agree=0.841, adj=0.642, (0 split)
+      X79  < 0.103625 to the left,  agree=0.814, adj=0.582, (0 split)
+      X391 < 0.083875 to the left,  agree=0.811, adj=0.576, (0 split)
+      X140 < 0.043625 to the left,  agree=0.811, adj=0.574, (0 split)
+
+Node number 3: 53815 observations,    complexity param=0.03856876
+  mean=3.830819, MSE=0.8430166 
+  left son=6 (18663 obs) right son=7 (35152 obs)
+  Primary splits:
+      X79  < 0.113375 to the left,  improve=0.09073976, (0 missing)
+      X164 < 0.145375 to the left,  improve=0.08841271, (0 missing)
+      X391 < 0.105125 to the left,  improve=0.08725543, (0 missing)
+      X54  < 0.087125 to the left,  improve=0.08410163, (0 missing)
+      X140 < 0.048375 to the left,  improve=0.08311375, (0 missing)
+  Surrogate splits:
+      X296 < 0.027625 to the left,  agree=0.867, adj=0.615, (0 split)
+      X86  < 0.198375 to the left,  agree=0.856, adj=0.584, (0 split)
+      X391 < 0.099375 to the left,  agree=0.854, adj=0.578, (0 split)
+      X443 < 0.124125 to the left,  agree=0.853, adj=0.577, (0 split)
+      X140 < 0.035375 to the left,  agree=0.850, adj=0.567, (0 split)
+
+Node number 4: 20024 observations,    complexity param=0.01959749
+  mean=2.721659, MSE=1.005514 
+  left son=8 (7677 obs) right son=9 (12347 obs)
+  Primary splits:
+      userId splits as  --R---R-LR---RR---L-RL---R-R-----R-L-R--R--R--R--L---RL-L----------R------LR-R--LRL-----R-R--R-------R------R-R--R-RR--RR----RL---LLL--R--L---R-RRR-L---L----RRL--R---L--R--R---R---R------------R----L-------LR-----R--LLL--RL------R-RL---R-------L---------R-R-L--R--R--L-LR--R------R-R---LR---RLL--LL--R----RLL--L-RRRR-----RRL---RR---LR-------R-------R--------RRR-R-R--LR--RL-----R----LRLR----L-LRL-------R-R----R--R-L-----L----LL--L----R-R---L---R-LL-----R-R---RR-----R----RR---LRRLR----L-LL-----R---RRLL--RRLRL---L--L------R----R-----LR----R---RR-----L--R---R-R-R---L--RL---RL------R----L-RR-R-----LL-R--R--RR-, improve=0.10388740, (0 missing)
+      X155   < 0.148625 to the right, improve=0.06689165, (0 missing)
+      X446   < 0.124625 to the left,  improve=0.05289400, (0 missing)
+      X350   < 0.040125 to the left,  improve=0.04970641, (0 missing)
+      X364   < 0.163625 to the left,  improve=0.04770334, (0 missing)
+  Surrogate splits:
+      X129 < 0.083375 to the left,  agree=0.620, adj=0.009, (0 split)
+      X93  < 0.015625 to the left,  agree=0.618, adj=0.004, (0 split)
+      X63  < 0.003125 to the left,  agree=0.618, adj=0.003, (0 split)
+      X82  < 0.041875 to the left,  agree=0.618, adj=0.002, (0 split)
+      X350 < 0.019125 to the left,  agree=0.617, adj=0.002, (0 split)
+
+Node number 5: 25007 observations,    complexity param=0.01791115
+  mean=3.424381, MSE=0.9225419 
+  left son=10 (6330 obs) right son=11 (18677 obs)
+  Primary splits:
+      userId splits as  --L---R-RL---RR---L-RL---R-L-----R-L-R--L--R--L--L---LR-R----------R------RL-R--LRR-----L-R--R-------R------R-R--R-RR--RR----RR---RLL--R--L---L-RRL-R---L----RLR--L---R--R--R---R---L------------R----R-------RR-----L--LRR--RR------L-RR---R-------L---------L-L-R--L--R--R-RR--R------R-R---LR---RRL--RL--R----RRL--L-RRRL-----RRR---RL---RR---L---L-------R--------RRL-R-L--LR--RR-----R----RRLR----R-RLR-------R-L----R--R-L-----R----RL--R----R-R---L---R-RR-----R-R---LR-----R----RR---LRRLR----L-RR-----R---RLRR--RRLRL---R--L------R----R-----RR----R---RR-----R--R---R-R-R---L--RR---RR------R----R-RR-R-----LR-R--R--RR-, improve=0.08286616, (0 missing)
+      X140   < 0.101875 to the left,  improve=0.03406540, (0 missing)
+      X391   < 0.144375 to the left,  improve=0.03365509, (0 missing)
+      X55    < 0.124375 to the left,  improve=0.03333776, (0 missing)
+      X31    < 0.024875 to the left,  improve=0.03247316, (0 missing)
+  Surrogate splits:
+      X327 < 0.019125 to the left,  agree=0.747, adj=0.002, (0 split)
+      X234 < 0.011125 to the left,  agree=0.747, adj=0.001, (0 split)
+      X290 < 0.005625 to the left,  agree=0.747, adj=0.001, (0 split)
+      X492 < 0.003375 to the left,  agree=0.747, adj=0.001, (0 split)
+      X29  < 0.05575  to the left,  agree=0.747, adj=0.001, (0 split)
+
+Node number 6: 18663 observations,    complexity param=0.01715117
+  mean=3.45124, MSE=0.9239473 
+  left son=12 (11679 obs) right son=13 (6984 obs)
+  Primary splits:
+      userId splits as  RR-LLL-L--LRL--LRL-L--LL--L-LRRLL-R-R-RL-LR-RR-RR-LRR--R-RRLLRLLRRR-RLRRLL--R-RR---LLRLL-R-RR-LLRLRRL-LLRRRL-L-LL-R--LR--RRLR--RRR---LL-LL-LLR-L---R-LLL-LRLL---LR-RLL-LR-RR-RRR-RRL-LRLLRLR-RLR--LRLL-RRLLLRL--LRLLR-LL---LL--RLLRLR----LLL-RRRRLRL-RLRLL-RRL-R-L-RL-LL-LR-L--LR-RRRLLR-R-RLL--LLR---LL--LL-LRRR---LL-L----LLRRR---LLR--LLL--LRR-RRR-LRRLLRR-LLLLRRLL---R-R-LR--LR--LLRLL-LLLL----RRLL-L---LLLLLRL-R--RLR-LR-L-RLLLL-LLLR--RL-LRLR-L-LLR-RLL-R--RLRRL-R-RLL--RLLRL-LLLR--RLL-----LRRR-L--RRLLL-LRL----RL-----RLL--L-LRRLLR-LLRL-RLRRR--RRLL-LRR--LRLRR-RL-RRR-L-R-RLL-LR--LRR--LLRLRR-RRRR-R--L-RLLLR--R-LL-LR--L, improve=0.10616140, (0 missing)
+      X155   < 0.148125 to the right, improve=0.05340044, (0 missing)
+      X96    < 0.23575  to the right, improve=0.04230607, (0 missing)
+      X100   < 0.248125 to the right, improve=0.03887665, (0 missing)
+      X446   < 0.164375 to the left,  improve=0.03769333, (0 missing)
+  Surrogate splits:
+      X266 < 0.66475  to the left,  agree=0.627, adj=0.002, (0 split)
+      X169 < 0.1445   to the right, agree=0.626, adj=0.002, (0 split)
+      X373 < 0.005625 to the right, agree=0.626, adj=0.002, (0 split)
+      X122 < 0.054125 to the right, agree=0.626, adj=0.001, (0 split)
+      X46  < 0.03925  to the right, agree=0.626, adj=0.001, (0 split)
+
+Node number 7: 35152 observations,    complexity param=0.01314472
+  mean=4.032345, MSE=0.6829405 
+  left son=14 (16863 obs) right son=15 (18289 obs)
+  Primary splits:
+      userId splits as  RL-LLL-R--RRR--LRL-R--LLR-L-RRLRR-R-R-RR-LR-RR-RR-RRR--R-RRRRRLLRRL-RRLRLR--L-RR---LLLRR-R-LR-RRRRRLR-RLRRRR-R-LR-L--LR--RRRL--RLL---LL-RL-LLL-L---L-LLR-RLLL---LR-RLR-RR-RL-LLR-RRL-LLRLRLRRLRLL-LLRL-LRLRRLR--RRRLR-RL---RR--RLLRRL-L--LRR-LRLLRLR-RLLRRRRRR-L-R-LR-LL-LR-R--LR-RRLRLR-R-RRL--LRR---RR--RR-RLRR---LR-R----LLRLL---LRR--LLL--RRR-RRL-RLLLLRL-LRRLRRRL---R-R-LR--LR--LRRRR-RLRR----LRLR-L---RRLRLLL-R-RRRR-RR-R-RRLLR-RLLL--RR-LLRR-R-RLR-RRL-R--RRRRL-R-RRR--LRRLL-LLLR--RRR-----LLLR-L--RLLRR-LRR----LR-----RRR-RL-LRRLLR-LRRL-LRRRL--RRLR-LRR--RRLRL-RR-RLL-L-R-LLL-RL--RRR--LRRLRR-RRRR-R--R-LRLRL--R-LL-LL--R, improve=0.05844131, (0 missing)
+      X55    < 0.253375 to the left,  improve=0.02954095, (0 missing)
+      X467   < 0.167125 to the left,  improve=0.02914619, (0 missing)
+      X365   < 0.479875 to the left,  improve=0.02872984, (0 missing)
+      X155   < 0.086375 to the right, improve=0.02743611, (0 missing)
+  Surrogate splits:
+      X93  < 0.102375 to the left,  agree=0.540, adj=0.040, (0 split)
+      X367 < 0.141875 to the left,  agree=0.538, adj=0.037, (0 split)
+      X481 < 0.180375 to the left,  agree=0.535, adj=0.031, (0 split)
+      X47  < 0.011375 to the right, agree=0.535, adj=0.031, (0 split)
+      X78  < 0.163375 to the right, agree=0.535, adj=0.030, (0 split)
+
+Node number 8: 7677 observations
+  mean=2.311775, MSE=0.974341 
+
+Node number 9: 12347 observations
+  mean=2.976513, MSE=0.8554862 
+
+Node number 10: 6330 observations
+  mean=2.949447, MSE=1.053053 
+
+Node number 11: 18677 observations
+  mean=3.585346, MSE=0.7759522 
+
+Node number 12: 11679 observations
+  mean=3.20905, MSE=0.8879916 
+
+Node number 13: 6984 observations
+  mean=3.856243, MSE=0.7219599 
+
+Node number 14: 16863 observations
+  mean=3.82429, MSE=0.7092671 
+
+Node number 15: 18289 observations
+  mean=4.224178, MSE=0.5819546 
+
+[1] "Mean squared error"
+[1] 1.000883
